@@ -41,12 +41,16 @@
           />
         </a>
       </div>
+    
       <!--Navigation-->
-      <nav class="flex nav-links text-[#FFF8F8] gap-2">
+      <nav class="flex nav-links text-[#FFF8F8] gap-2 ham-menu">
+        <span></span>
+        <span></span>
+        <span></span>
         <div
-          class="search-container bg-[#FFF8F8] text-[#2D3047] px-1 rounded-md"
+          class="search-container bg-[#FFF8F8] text-[#2D3047] px-1 rounded-md hidden-search"
         >
-          <form action="#" class="flex flex-row">
+          <form action="#" class="flex-row">
             <input
               type="text"
               placeholder="Search..."
@@ -57,105 +61,108 @@
             </button>
           </form>
         </div>
-        <div class="flex pt-1 gap-4">
-          <a href="#"><i class="fa-solid fa-heart hover:text-[#FFCBC6]"></i></a>
-          <a href="#"
-            ><i class="fa-solid fa-cart-shopping hover:text-[#FFCBC6]"></i>
+        <div class="flex pt-1 gap-4 small-screen-menu">
+          <a href="#" class="hover:text-[#FFCBC6]"><i class="fa-solid fa-heart hover:text-[#FFCBC6] "></i><p class="inline hidden-items"> Favorites</p></a>
+          <a href="#" class="hover:text-[#FFCBC6]"
+            ><i class="fa-solid fa-cart-shopping hover:text-[#FFCBC6]"></i> <p class="inline hidden-items">Cart</p>
           </a>
-          <a href="#"
+          <a href="#" class="hover:text-[#FFCBC6]"
             ><i class="fa-solid fa-circle-user hover:text-[#FFCBC6]"></i
-          ></a>
+          > <p class="inline hidden-items">Profile</p></a>
         </div>
+        
       </nav>
     </header>
 
     <!--Product Description and Photos Section -->
     <section class="container-product bg-[#FFF8F8] p-scroll-smooth fade-in fade-in-1">
-      <div class="small-imgs">
-        <div class="img1">
+      <div class="imgs">
+        <div class="small-imgs">
+          <div class="img1">
+            <img
+              src="images/BlueCeramicFront.JPG"
+              alt="Blue ceramic pot front view"
+              class="prod-img cursor-pointer thumbnail hover:brightness-75 object-cover"
+              onclick="changeMain(this)"
+            />
+          </div>
+          <div class="img2">
+            <img
+              src="images/BlueCeramicBack.JPG"
+              alt="Blue ceramic pot back view"
+              class="prod-img cursor-pointer thumbnail hover:brightness-75 object-cover"
+              onclick="changeMain(this)"
+            />
+          </div>
+          <div class="img3">
+            <video
+              muted
+              class="prod-img cursor-pointer thumbnail hover:brightness-75 object-cover"
+              onclick="changeMain(this)"
+            >
+              <source src="images/BlueCeramicVideo.MP4" type="video/mp4" />
+            </video>
+          </div>
+          <div class="img4">
+            <img
+              src="images/BlueCeramicInside.JPG"
+              alt="Blue ceramic pot inside view"
+              class="prod-img cursor-pointer thumbnail hover:brightness-75 object-cover"
+              onclick="changeMain(this)"
+            />
+          </div>
+        </div>
+        <!--Product Image Big -->
+        <div class="bigimg">
           <img
+            id="mainDisplay"
             src="images/BlueCeramicFront.JPG"
-            alt="Blue ceramic pot front view"
-            class="prod-img cursor-pointer thumbnail hover:brightness-75 object-cover"
-            onclick="changeMain(this)"
-          />
-        </div>
-        <div class="img2">
-          <img
-            src="images/BlueCeramicBack.JPG"
-            alt="Blue ceramic pot back view"
-            class="prod-img cursor-pointer thumbnail hover:brightness-75 object-cover"
-            onclick="changeMain(this)"
-          />
-        </div>
-        <div class="img3">
-          <video
-            width="600"
-            muted
-            class="prod-img cursor-pointer thumbnail hover:brightness-75 object-cover"
-            onclick="changeMain(this)"
-          >
-            <source src="images/BlueCeramicVideo.MP4" type="video/mp4" />
-          </video>
-        </div>
-        <div class="img4">
-          <img
-            src="images/BlueCeramicInside.JPG"
-            alt="Blue ceramic pot inside view"
-            class="prod-img cursor-pointer thumbnail hover:brightness-75 object-cover"
-            onclick="changeMain(this)"
+            alt="Main Display"
+            class="big-prod-img object-cover"
           />
         </div>
       </div>
-      <!--Product Image Big -->
-      <div class="bigimg">
-        <img
-          id="mainDisplay"
-          src="images/BlueCeramicFront.JPG"
-          alt="Main Display"
-          class="big-prod-img object-cover"
-        />
-      </div>
-      <div class="description-title">
-        <h4 class="text-[#EE655B] text-xl">Handcrafted</h4>
-        <h2 class="text-4xl font-bold mb-1 text-[#2D3047]">
-          Ocean's Ember Jar 
-        </h2>
-        <p class="description-text text-[#2D3047] text-md mt-0 mb-2">
-          Wheel-thrown ceramic jar with a fitted lid, combining timeless
-          craftsmanship with a striking interplay of colors.
-        </p>
-      </div>
-      <div class="description">
-      <div class="bulltets outline outline-[#f9cbc6] outline-4 font-[#2D3047] rounded-lg px-4 py-6">
-        <h6 class="font-bold">LBM clay fired to cone 10 with 2 coats of blue celadón</h6>
-        <ul class="text-[#2D3047] text-md list-disc pl-4">
-          <li class="ml-4">
-            High-fire durability with a smooth, glossy finish.
-          </li>
-        </ul>
-        <h6 class="mt-4 font-bold">Tints of orange underglaze shine through the blue glaze,
-        capturing beautiful undertones</h6>
-        <ul class="text-[#2D3047] text-md list-disc pl-4">
-          <li class="ml-4">
-            Creates a rich contrast that shifts with light.
-          </li>
-        </ul>
-        <h6 class="mt-4 font-bold">Thoughtfully designed lid for both aesthetic appeal and
-          function</h6>
-        <ul class="text-[#2D3047] text-md list-disc pl-4">
-          <li class="ml-4">
-            Blends aesthetics with practical usability.
-          </li>
-        </ul>
-        <h6 class="mt-4 font-bold">Hand-thrown for a truly unique, artisanal touch</h6>
-        <ul class="text-[#2D3047] text-md list-disc pl-4">
-          <li class="ml-4">
-            Each piece is uniquely artisanal.
-          </li>
-        </ul>
-      </div>
-      <div class="container-buttons items-center ">
+      <div class="description-area">
+        <div class="description-title">
+          <h4 class="text-[#EE655B] text-xl">Handcrafted</h4>
+          <h2 class="text-4xl font-bold mb-1 text-[#2D3047]">
+            Ocean's Ember Jar 
+          </h2>
+          <p class="description-text text-[#2D3047] text-md mt-0 mb-2">
+            Wheel-thrown ceramic jar with a fitted lid, combining timeless
+            craftsmanship with a striking interplay of colors.
+          </p>
+        </div>
+        <div class="description">
+        <div class="bulltets outline outline-[#f9cbc6] outline-4 font-[#2D3047] rounded-lg px-4 py-6">
+          <h6 class="font-bold">LBM clay fired to cone 10 with 2 coats of blue celadón</h6>
+          <ul class="text-[#2D3047] text-md list-disc pl-4">
+            <li class="ml-4">
+              High-fire durability with a smooth, glossy finish.
+            </li>
+          </ul>
+          <h6 class="mt-4 font-bold">Tints of orange underglaze shine through the blue glaze,
+          capturing beautiful undertones</h6>
+          <ul class="text-[#2D3047] text-md list-disc pl-4">
+            <li class="ml-4">
+              Creates a rich contrast that shifts with light.
+            </li>
+          </ul>
+          <h6 class="mt-4 font-bold">Thoughtfully designed lid for both aesthetic appeal and
+            function</h6>
+          <ul class="text-[#2D3047] text-md list-disc pl-4">
+            <li class="ml-4">
+              Blends aesthetics with practical usability.
+            </li>
+          </ul>
+          <h6 class="mt-4 font-bold">Hand-thrown for a truly unique, artisanal touch</h6>
+          <ul class="text-[#2D3047] text-md list-disc pl-4">
+            <li class="ml-4">
+              Each piece is uniquely artisanal.
+            </li>
+          </ul>
+        </div>
+        <div class="container-buttons items-center ">
         <a
           href="#"
           class="btn1 bg-[#2D3047] text-[#FFF8F8] rounded-4xl hover:scale-105 transition duration-300 ease-in-out fade-right-in fade-right-in-1"
@@ -164,9 +171,10 @@
         <a href="#" class="btn2 bg-[#FFF8F8] text-[#2D3047] border border-[#2D3047] rounded-4xl hover:scale-105 transition duration-300 ease-in-out fade-right-in fade-right-in-2">Favorite <i class="fa-solid fa-heart p-1"></i></a> 
         <a href="#similarProducts" class="btn3 smooth-scrolling bg-[#EE655B] text-[#FFF8F8] rounded-4xl hover:scale-105 transition duration-300 ease-in-out fade-right-in fade-right-in-3">Similar Products</a>
       </div>
+    </div>
 
     </section>
-    <section class="">
+    <section class="m-0 p-0">
       <!--svg-->
       <div class="m-0 p-0">
         <img src="images/wave-haikei.svg" class="w-full h-20 object-cover" />
@@ -174,10 +182,10 @@
     </section>
     <!--Highlight Section -->
     <section id="similarProducts" class="highlight text-[#FFF8F8] p-8 pb-16">
-      <h2 class="flex justify-center p-8 font-bold text-4xl">
+      <h2 class="flex justify-center items-center text-center p-8 font-bold text-4xl">
         Similar Products
       </h2>
-      <div class="flex justify-center gap-8">
+      <div class="flex max-sm:flex-col lg:flex-row justify-center items-center gap-8">
         <!--Card 1-->
         <div id="circleVase" class="relative">
             <a href="#circleVase"><img
@@ -230,49 +238,52 @@
     <p>&copy; 2025 Pottery with Debby. All rights reserved.</p>
   <div class="max-w-xl mx-auto text-[#FFF8F8]">
       <h2 class="text-center text-3xl font-bold mb-6 pt-6">Email Sign Up</h2>
-      <form class="bg-[#FFF8F8] text-[#2D3047] p-6 rounded-lg shadow-lg space-y-4">
+      <form role="form" class="bg-[#FFF8F8] text-[#2D3047] p-6 rounded-lg shadow-lg space-y-4">
         <div class="flex gap-4">
-        <!-- First Name -->
-        <div>
-          <label for="firstName" class="block text-[#2D3047] font-semibold">First Name</label>
-          <input type="text" id="firstName" name="firstName" class="w-full p-3 mt-2 rounded-md border border-[#2D3047] focus:outline-none focus:ring-2 focus:ring-[#FFCBC6]" placeholder="Enter your first name"  />
-        </div>
+          <!-- First Name -->
+          <div>
+            <label for="firstName" class="block text-[#2D3047] font-semibold">First Name</label>
+            <input type="text" id="firstName" name="firstName" aria-labelledby="firstName" class="w-full p-3 mt-2 rounded-md border border-[#2D3047] focus:outline-none focus:ring-2 focus:ring-[#FFCBC6]" placeholder="Enter your first name" tabindex="0" />
+          </div>
 
-        <!-- Last Name -->
-        <div>
-          <label for="lastName" class="block text-[#2D3047] font-semibold">Last Name</label>
-          <input type="text" id="lastName" name="lastName" class="w-full p-3 mt-2 rounded-md border border-[#2D3047] focus:outline-none focus:ring-2 focus:ring-[#FFCBC6]" placeholder="Enter your last name"  />
-        </div>
+          <!-- Last Name -->
+          <div>
+            <label for="lastName" class="block text-[#2D3047] font-semibold">Last Name</label>
+            <input type="text" id="lastName" name="lastName" aria-labelledby="lastName" class="w-full p-3 mt-2 rounded-md border border-[#2D3047] focus:outline-none focus:ring-2 focus:ring-[#FFCBC6]" placeholder="Enter your last name" tabindex="0" />
+          </div>
         </div>
         <div class="flex gap-4">
-        <!-- Email -->
-        <div>
-          <label for="email" class="block text-[#2D3047] font-semibold">Email</label>
-          <input type="email" id="email" name="email" class="w-full p-3 mt-2 rounded-md border border-[#2D3047] focus:outline-none focus:ring-2 focus:ring-[#FFCBC6]" placeholder="Enter your email" />
-        </div>
+          <!-- Email -->
+          <div>
+            <label for="email" class="block text-[#2D3047] font-semibold">Email</label>
+            <input type="email" id="email" name="email" aria-labelledby="email" class="w-full p-3 mt-2 rounded-md border border-[#2D3047] focus:outline-none focus:ring-2 focus:ring-[#FFCBC6]" placeholder="Enter your email" tabindex="0" />
+          </div>
 
-        <!-- Skill Level -->
-        <div>
-          <label for="skillLevel" class="block text-[#2D3047] font-semibold">Skill Level</label>
-          <select id="skillLevel" name="skillLevel" class="w-full p-3 mt-2 rounded-md border border-[#2D3047] focus:outline-none focus:ring-2 focus:ring-[#FFCBC6]">
-            <option value="" disabled selected>Select your skill level</option>
-            <option value="beginner">Beginner</option>
-            <option value="intermediate">Intermediate</option>
-            <option value="expert">Expert</option>
-          </select>
+          <!-- Skill Level -->
+          <div>
+            <label for="skillLevel" class="block text-[#2D3047] font-semibold">Skill Level</label>
+            <select id="skillLevel" name="skillLevel" aria-labelledby="skillLevel" aria-describedby="skillLevelDesc" class="w-full p-3 mt-2 rounded-md border border-[#2D3047] focus:outline-none focus:ring-2 focus:ring-[#FFCBC6]" tabindex="0">
+              <option value="" disabled selected>Select your skill level</option>
+              <option value="beginner">Beginner</option>
+              <option value="intermediate">Intermediate</option>
+              <option value="expert">Expert</option>
+            </select>
+            <span id="skillLevelDesc" class="sr-only">Select your experience level for the class.</span>
+          </div>
         </div>
-      </div>
+  
         <!-- Newsletter Signup -->
-        <div >
-          <input type="checkbox" id="newsletter" name="newsletter" class="mr-2" />
-          <label for="newsletter" class="text-[#2D3047]">Sign up for our newsletter</label>
+        <div>
+          <input type="checkbox" id="newsletter" name="newsletter" aria-checked="false" class="mr-2" tabindex="0"/>
+          <label for="newsletter" class="text-[#2D3047]" >Sign up for our newsletter</label>
         </div>
 
         <!-- Submit Button -->
         <div class="text-center">
-          <button type="submit" class="w-full bg-[#2D3047] text-[#FFF8F8] font-medium py-3 rounded-xl hover:scale-105 transition duration-300 ease-in-out">Sign Up</button>
+          <button type="submit" class="w-full bg-[#2D3047] text-[#FFF8F8] font-medium py-3 rounded-xl hover:scale-105 transition duration-300 ease-in-out" aria-label="Submit the form to sign up" tabindex="0">Sign Up</button>
         </div>
       </form>
+
     </div>
 
 
@@ -316,6 +327,11 @@
           }
         }
       }
+
+      //ham menu
+      const hamMenu = document.querySelector('.ham-menu');
+      const smallScreenMenu = document.querySelector('.small-screen-menu');
+      hamMenu.addEventListener('click',() => {hamMenu.classList.toggle('active'); smallScreenMenu.classList.toggle('active');})
     </script>
   </body>
 
@@ -333,5 +349,8 @@
   
   Q: Ideas for hover effects?
   A: Change color, size etc... (Those were the ideas I took from it)
-  -->
+  
+  Q: How to make a p tag inline in tailwind?
+  A: use inline 
+-->
 </html>
